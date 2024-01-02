@@ -25,17 +25,26 @@ for (let i = 0; i < 256; i++) {
 
 
 const button = document.querySelector("button");
-button.addEventListener("click", getNewSquares);
+button.addEventListener("click", getNewGrid);
 
 
-function getNewSquares(number) {
+function getNewGrid(number) {
     document.querySelectorAll(".square").forEach(div => div.remove());
     number = prompt("up to 100");
     for (let i = 0; i < number * number; i++) {
         const square = document.createElement("div");
         square.setAttribute("class", "square")
         container.appendChild(square);
-    
+        
+        // 16 is the width and height of the grid
+        const newWidth = (16 / number) + "px";
+        square.style.width = newWidth;
+
+        const newHeight = (16 / number) + "px";
+        square.style.height = newWidth;
+
+
+        
         //hoover effect
         square.addEventListener("mouseover", () => {
             square.style.background = "green";
@@ -44,7 +53,12 @@ function getNewSquares(number) {
         square.addEventListener("mouseout", () => {
             square.style.background = "white";
         });
+
+        
     }
+
+
+    //16 / number of pixel
 }
 
 
