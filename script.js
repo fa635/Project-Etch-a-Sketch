@@ -44,18 +44,33 @@ function getNewGrid(number) {
         square.style.height = newWidth;
 
 
+    
+        function getRandomColor() {
+            let color = [ ];
+            for (let i = 0; i < 3; i++) {
+
+                color.push(Math.floor(Math.random() * 256))
+                
+            }
+            
+            return "rgb(" + color.join(", ") + ")";
+
+        }
         
+
         //hoover effect
         square.addEventListener("mouseover", () => {
-            square.style.background = "green";
+            square.style.background = getRandomColor();
         });
         
         square.addEventListener("mouseout", () => {
-            square.style.background = "white";
+            square.style.background = getRandomColor();
         });
 
         
     }
+
+    
 
 
     //16 / number of pixel
