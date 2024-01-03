@@ -36,8 +36,6 @@ function getNewGrid(number) {
         number = prompt("Enter a valid number between 0 to 100");
     };
 
-    
-    
 
 
     for (let i = 0; i < number * number; i++) {
@@ -45,7 +43,7 @@ function getNewGrid(number) {
         square.setAttribute("class", "square");
         container.appendChild(square);
         
-        // 16 is the width and height of the grid
+        // 960 is the width and height of the grid
         const newWidth = (960 / number) + "px";
         square.style.width = newWidth;
 
@@ -65,18 +63,6 @@ function getNewGrid(number) {
             return "rgb(" + color.join(", ") + ")";
 
         }
-        
-
-            
-        
-            //for (let i = 0; i > 0; i -= 10) 
-
-            //getRandomColor().filter = "brightness(" + i + "%)"
-            
-
-
-
-        
         
         
 
@@ -99,12 +85,6 @@ function getNewGrid(number) {
     let x = 100;
     let y = 100;
 
-    /*for (let x = 100; x > 0; x -= 10) {
-        square.style.filter = "brightness(" + x + "%)"
-    }*/
-    // try to put the hoover and rest outside of the square creation loop
-
-    //16 / number of pixel
 }
 
 
