@@ -30,10 +30,19 @@ button.addEventListener("click", getNewGrid);
 
 function getNewGrid(number) {
     document.querySelectorAll(".square").forEach(div => div.remove());
-    number = prompt("up to 100");
+    
+
+    while (isNaN(number) || number > 100 || number < 0) {
+        number = prompt("Enter a valid number between 0 to 100");
+    };
+
+    
+    
+
+
     for (let i = 0; i < number * number; i++) {
         const square = document.createElement("div");
-        square.setAttribute("class", "square")
+        square.setAttribute("class", "square");
         container.appendChild(square);
         
         // 16 is the width and height of the grid
