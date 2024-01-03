@@ -46,10 +46,10 @@ function getNewGrid(number) {
         container.appendChild(square);
         
         // 16 is the width and height of the grid
-        const newWidth = (16 / number) + "px";
+        const newWidth = (960 / number) + "px";
         square.style.width = newWidth;
 
-        const newHeight = (16 / number) + "px";
+        const newHeight = (960 / number) + "px";
         square.style.height = newWidth;
 
 
